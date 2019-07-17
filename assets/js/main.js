@@ -100,6 +100,12 @@ function step() {
  	// Update step
  	window.game_step_counter++;
  	refreshStepCounter();
+
+ 	// Step limit
+ 	if (window.game_step_counter >= window.game_step_counter_limit) {
+ 		end();
+ 		$('.step_counter').addClass('limit');
+ 	}
 }
 
 function refreshStepCounter() {
@@ -109,12 +115,14 @@ function refreshStepCounter() {
 function resetStepCounter() {
 	window.game_step_counter = 0;
 	refreshStepCounter();
+	$('.step_counter').removeClass('limit');
 }
 
 function start(speed = 0) {
 	speed = parseInt($('#speed').val());
 
 	window.game_status = 'on';
+	$('.start').text('Stop');
 
 	window.interval_handle = window.setInterval(function() {
   		step();
@@ -123,6 +131,7 @@ function start(speed = 0) {
 
 function end() {
 	window.game_status = 'off';
+	$('.start').text('Start');
 	window.clearInterval(window.interval_handle);
 }
 
@@ -143,10 +152,8 @@ $(document).ready(function() {
 	// Start auto walk
 	$('.start').click(function() {
 		if (isStarted()) {
-			$(this).text('Start');
 			end();
 		} else {
-			$(this).text('Stop');
 			start();	
 		}	
 	});
@@ -198,8 +205,9 @@ $(document).ready(function() {
 	});
 
 
-	var nb_rows = 20;
-	var nb_columns = 40;
+	var nb_rows = 12;
+	var nb_columns = 12;
+	window.game_step_counter_limit = 200;
 
 	$('#new_nb_rows').val(nb_rows);
 	$('#new_nb_columns').val(nb_columns);

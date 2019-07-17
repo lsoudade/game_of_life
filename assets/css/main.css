@@ -140,6 +140,10 @@ footer .right .commands_right {
     font-family:"courier";
 }
 
+.step_counter.limit {
+	background:#ffbb35;
+}
+
 .cell {
 	float:left;
 	box-sizing:border-box;
