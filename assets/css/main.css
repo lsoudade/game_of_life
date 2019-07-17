@@ -158,3 +158,75 @@ footer .right .commands_right {
 .black {
 	background:#000;
 }
+
+
+/* PHONE */
+
+@media only screen and (max-width : 1000px) {
+	.game-wrapper {
+		height:calc(100% - 158px);
+	}
+
+	footer {
+		display:flex;
+        flex-flow: column;
+		height:158px;
+	}
+
+	footer .left {
+		order:2;
+		width:100%;
+		background:#000;
+		padding-top:6px;
+		height:50px;
+	}
+
+	footer .left .title {
+		font-size:16px;
+	}
+
+	footer .left .me {
+		padding-top:6px;
+	}
+
+	footer .right {
+		width:100%;
+		text-align:center;
+		padding-top:6px;
+	}
+
+	footer .right .commands_left,
+	footer .right .commands_middle,
+	footer .right .commands_right {
+		float:none;
+		width:100%;
+		overflow:auto;
+	}
+
+	footer .right .commands_left div,
+	footer .right .commands_middle div,
+	footer .right .commands_right div {
+		display:inline-block;
+		margin: 3px 0 3px 0;
+	}
+
+	footer .right .commands_left > div:first-child,
+	footer .right .commands_middle > div:first-child,
+	footer .right .commands_right > div:first-child {
+		margin: 3px 0 3px 0;
+	}
+
+	#pattern {
+		margin-top:1px;
+		margin-left:6px;
+	}
+
+	.step_counter {
+		margin-top:0px !important;
+		margin-left:6px !important;
+	}
+
+	.reset {
+		margin-left:6px !important;
+	}
+}
