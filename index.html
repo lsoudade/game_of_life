@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lorraine's Game of Life</title>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+	<div class="game-wrapper">
+		<div class="game" style="display:none;"></div>	
+	</div>
+
+	<footer>
+		<div class="left">
+			<div class="title">Game Of Life</div>
+			<div class="author">Invented by John Conway</div>
+			<div class="me">Lorraine Soudade - 2019</div>
+		</div>
+
+		<div class="right">
+			<div class="commands_left">
+				<div>
+					<input type="text" id="new_nb_columns">
+					<input type="text" id="new_nb_rows">
+					<button class="new_cell_number">Set size</button>
+				</div>
+				<div>
+					<select id="pattern">
+						<option value="" selected>Load a special pattern</option>
+						<option value="blinker">Blinker (2-period)</option>
+						<option value="pulsar">Pulsar (3-period)</option>
+						<option value="pinwheel">Pinwheel (4-period)</option>
+						<option value="octagon_2">Octagon 2 (5-period)</option>
+						<option value="rats">Rats (6-period)</option>
+						<option value="burloaferimeter">Burloaferimeter (7-period)</option>
+						<option value="figure_eight">Figure eight (8-period)</option>
+						<option value="worker_bee">Worker bee (9-period)</option>
+						<option value="dinner_table">Dinner table (12-period)</option>
+						<option value="buckinghams_p13">Buckingham's p13 (13-period)</option>
+						<option value="tumbler">Tumbler (14-period)</option>
+						<option value="pentadecathlon">Pentadecathlon (15-period)</option>
+						<option value="two_preL_hasslers">Two pre-L hasslers (16-period)</option>
+						<option value="117P18">117P18 (18-period)</option>
+						<!--<option value="145P20">145P20 (20-period)</option>
+						<option value="124P21">124P21 (21-period)</option>
+						<option value="168P22_1">117P18 (22-period)</option>-->
+					</select>
+				</div>
+			</div>
+
+			<div class="commands_middle">
+				<div>
+					<button class="step">Step</button>
+					<button class="start">Start</button>
+				</div>
+				<div>
+					<div class="step_counter"></div>
+				</div>
+			</div>
+
+			<div class="commands_right">
+				<div>
+					<select id="speed">
+						<option value="2000">2 seconds</option>
+						<option value="1000">1 second</option>
+						<option value="500" selected>1/2 second</option>
+						<option value="250">1/4 second</option>
+						<!--<option value="100">1/10 second</option>-->
+					</select>
+				</div>
+				<div>
+					<button class="reset">Reset</button>
+					<button class="clear">Clear</button>
+
+					<!--<button class="generate">Generate pattern code</button>-->
+				</div>
+			</div>
+			
+		</div>
+	</footer>
+
+	<!-- JS includes -->
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/patterns.js"></script>
+</body>
+</html>

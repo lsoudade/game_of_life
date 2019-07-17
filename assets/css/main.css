@@ -1,0 +1,160 @@
+* {
+	font-family:"arial";
+}
+
+html, body {
+	height:100%;
+	background:#F6F6F6;
+}
+
+footer {
+	width:100%;
+	height:100px;
+	background:#333;
+	position:fixed;
+	bottom:0;
+	overflow:auto;
+}
+
+footer .left, 
+footer .right {
+	float:left;
+	height:100px;
+}
+
+footer .left {
+	width:40%;
+	text-align:center;
+	height:80px;
+	padding-top:20px;
+	color:#FFF;
+}
+
+footer .left .title {
+	font-family:"Courier";
+	font-size:22px;
+    font-weight:bold;
+}
+
+footer .left .author {
+	font-family:"Courier";
+	font-size:9px;
+}
+
+footer .left .me {
+	padding-top:12px;
+	font-size:9px;
+}
+
+footer .right {
+	width:60%;
+	overflow:auto;
+}
+
+footer .right input, 
+footer .right select,
+footer .right button {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border:solid 1px #CCC;
+    font-size: 12px;
+    height: 22px;
+}
+
+footer .right input {
+	background:#FFF;
+	width: 26px;
+    padding: 0 4px;
+}
+
+footer .right select {
+	background:#FFF;
+}
+
+footer .right button {
+	cursor:pointer;
+	padding: 4px 4px;
+	background:#DDD;
+}
+
+footer .right button:hover,
+footer .right button:focus {
+	background:#AAA;
+}
+
+footer .right .commands_left,
+footer .right .commands_middle,
+footer .right .commands_right {
+	float:left;
+}
+
+footer .right .commands_left > div:first-child,
+footer .right .commands_middle > div:first-child,
+footer .right .commands_right > div:first-child {
+	margin: 22px 0 10px 0;
+}
+
+footer .right .commands_left {
+	width:34%;
+}
+
+footer .right .commands_middle {
+	width:22%;
+
+}
+
+footer .right .commands_right {
+	width:44%;
+	
+}
+
+.game-wrapper {
+	box-sizing:border-box;
+	width:100%;
+	height:calc(100% - 100px);
+	padding:10px;
+}
+
+.game {
+	box-sizing:content-box;
+	background:#FFF;
+	border:solid 1px #CCC;
+	border-right:0;
+	border-bottom:0;
+	margin:0 auto;
+}
+
+.step_counter {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #F6F6F6;
+    display: inline-block;
+    padding: 0 4px;
+    font-size: 12px;
+    width: 67px;
+    height: 22px;
+    line-height: 25px;
+    text-align:right;
+    font-family:"courier";
+}
+
+.cell {
+	float:left;
+	box-sizing:border-box;
+	border:solid 1px #CCC;
+	border-left:0;
+	border-top:0;
+	cursor:pointer;
+	font-size:9px;
+    line-height:8px;
+}
+
+.white {
+	background:#FFF;
+}
+
+.black {
+	background:#000;
+}
